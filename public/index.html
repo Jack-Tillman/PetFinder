@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Pet Finder</title>
 </head>
+
 <body>
-    <h1>Pet Finder</h1>
-    
-    <script src="script.js"></script>
+  <main>
+    <h1>Welcome to Pet Finder!</h1>
+    <h2>Click below to check out our 'hello world' page or a list of all pets we have!</h2>
+    <div id="link-container">
+      <a href="http://localhost:8080/api/">Hello World</a>
+      <a href="http://localhost:8080/api/v1/pets/">All Pets</a>
+    </div>
+    <h2>Search Pets by Name:</h2>
+
+    <div id="link-container">
+      <a href="http://localhost:8080/api/v1/pets/Fido">Fido</a>
+      <a href="http://localhost:8080/api/v1/pets/Spot">Spot</a>
+      <a href="http://localhost:8080/api/v1/pets/Rover">Rover</a>
+    </div>
+
+    <h2>Search pets by owner name</h2>
+    <div id="link-container">
+      <a href="http://localhost:8080/api/v1/pets/owner?owner=John">John</a>
+      <a href="http://localhost:8080/api/v1/pets/owner?owner=Jane">Jane</a>
+    </div>
+  </main>
+
 </body>
+
 </html>
+
+
+<!-- 
+Main page - nav bar link to hello world, All Pets, Home
+          - main has 2 forms 
+            - 1 form corresponds to pet name 
+              - user selects pet name from radio button, upon submission redirect to api/v1/pets/:name, with :name being the chosen name 
+            - 1 form corresponds to owner name 
+              - user selects owner name from radio button, upon submission redirect to api/v1/pets/:name, with :name being the chosen name 
+
+      <form>
+        <label for="petname">
+            <input id="pet-name-input" type="text" name="petname" placeholder="What pet name do you want to search by?"/>
+        </label>
+      </form>
+
+
+    <main>
+      <h1>Pet Finder</h1>
+      <h2>How would you like to find some pets?</h2>
+      <div id="output">h</div>
+      <form id="pet-name-form">
+        <input type="radio" id="Fido" name="api/v1/pets/:name" value="Fido">
+        <label for="all-pets">Fido</label><br>
+        <input type="radio" id="Spot" name="search-format" value="Spot">
+        <label for="pet-name-search">Spot</label><br>
+        <input type="radio" id="Rover" name="search-format" value="Rover">
+        <label for="owner-name-search">Rover</label>
+        <button type="submit" id="submit-btn">Submit</button>
+      </form>
+      <br />
+      <form id="owner-name-form" >
+        <input type="radio" id="all-pets" name="search-format" value="all-pets">
+        <label for="all-pets">Show me all the pets</label><br>
+        <input type="radio" id="pet-name-search" name="search-format" value="pet-name-search">
+        <label for="pet-name-search">Search pets by pet name</label><br>
+        <input type="radio" id="owner-name-search" name="owner" value="owner-name-search">
+        <label for="owner-name-search">Search pets by owner name</label>
+        <button type="submit" id="submit-btn">Submit</button>
+      </form>
+    </main>
+
+
+-->

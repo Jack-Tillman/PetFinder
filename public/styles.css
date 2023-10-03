@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(180, 236, 218);
+    font-family: 'Courier New', Courier, monospace;
+    font-size:1rem;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5rem;
+}
+
+h1{
+    margin:2rem auto;
+}
+
+div#link-container {
+    font-size:1rem;
+    margin:4rem auto;
+}
+
+a{
+    margin:0rem 2rem;
+    text-decoration: none;
+    
+}
